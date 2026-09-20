@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinícius de Souza Silva · Dados</title>
+<meta name="description" content="Portfólio de Vinícius de Souza Silva, Analista e Engenheiro de Dados. Pipelines, modelagem dimensional, SQL Server e Power BI.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="mobile-header glass">
+  <a href="#top" class="brand">VSS<span class="brand-dot">.</span></a>
+  <div class="header-actions">
+    <button class="lang-toggle glass" id="lang-toggle" type="button" aria-label="Switch language">
+      <span class="lang-opt is-active" data-lang="pt">PT</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+    </button>
+    <button class="nav-burger" id="nav-burger" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav glass" id="mobile-nav">
+  <a href="#sobre" data-i18n="nav.about">Sobre</a>
+  <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+  <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+  <a href="#contato" data-i18n="nav.contact">Contato</a>
+</div>
+
+<div class="layout" id="top">
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">Analista &amp; Engenheiro de Dados</p>
+      <h1 class="side-name reveal">Vinícius<br>de Souza Silva</h1>
+      <p class="side-tagline reveal" data-i18n="hero.sub.short">Dados brutos em decisões de negócio: pipelines, modelagem e dashboards.</p>
+      <p class="side-meta reveal">
+        <span>~2 <span data-i18n="hero.stat.years.unit">anos</span></span>
+        <span class="meta-sep">·</span>
+        <span>AZ&#8209;900</span>
+        <span class="meta-sep">·</span>
+        <span><span data-i18n="hero.stat.projects.count">4</span> <span data-i18n="hero.stat.projects.word">projetos</span></span>
+      </p>
+    </div>
+
+    <nav class="side-nav" aria-label="Navegação de seções">
+      <a href="#sobre" class="side-nav-link" data-section="sobre"><span class="side-nav-line"></span><span data-i18n="nav.about">Sobre</span></a>
+      <a href="#experiencia" class="side-nav-link" data-section="experiencia"><span class="side-nav-line"></span><span data-i18n="nav.experience">Experiência</span></a>
+      <a href="#projetos" class="side-nav-link" data-section="projetos"><span class="side-nav-line"></span><span data-i18n="nav.projects">Projetos</span></a>
+      <a href="#contato" class="side-nav-link" data-section="contato"><span class="side-nav-line"></span><span data-i18n="nav.contact">Contato</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="social-row">
+        <a href="https://github.com/VinnySou" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.2.68.8.56A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/viniciussousilva" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="mailto:viniciusdsouza62@gmail.com" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.1L19.8 6H4.2Zm-.2 1.6V18h16V7.6l-7.5 5.9a1 1 0 0 1-1.2 0L4 7.6Z"/></svg>
+        </a>
+      </div>
+      <button class="lang-toggle glass" id="lang-toggle-desktop" type="button" aria-label="Switch language">
+        <span class="lang-opt is-active" data-lang="pt">PT</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <section id="sobre" class="csection">
+      <p class="csection-eyebrow reveal" data-i18n="about.eyebrow">01 · Sobre</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">Sou trainee de dados na Databasers, uma consultoria especializada, onde atuo de ponta a ponta: da ingestão à entrega do dashboard. No dia a dia, oriento pipelines no Azure Data Factory e no Microsoft Fabric, administro e otimizo bancos SQL Server (on-premises e Azure SQL) e construo soluções analíticas em Power BI.</p>
+          <p data-i18n="about.p2">Estudo Ciência da Computação na FAESA, com conclusão prevista para 2027, e sou certificado em Microsoft Azure Fundamentals (AZ&#8209;900). Estou me preparando para a certificação DP&#8209;700 (Fabric Data Engineer Associate).</p>
+          <p data-i18n="about.p3">Comecei em help desk, migrei para dados através de um estágio e segui como trainee. Hoje busco uma posição de Analista ou Engenheiro de Dados onde eu possa assumir mais responsabilidade sobre arquitetura e qualidade de dados.</p>
+        </div>
+        <div class="about-facts reveal glass">
+          <dl>
+            <div class="fact">
+              <dt data-i18n="about.fact.location">Localização</dt>
+              <dd>Cariacica, ES, Brasil</dd>
+            </div>
+            <div class="fact">
+              <dt data-i18n="about.fact.role">Cargo atual</dt>
+              <dd data-i18n="about.fact.role.value">Trainee de Dados, Databasers</dd>
+            </div>
+            <div class="fact">
+              <dt data-i18n="about.fact.education">Formação</dt>
+              <dd data-i18n="about.fact.education.value">Ciência da Computação, FAESA (cursando)</dd>
+            </div>
+            <div class="fact">
+              <dt data-i18n="about.fact.cert">Certificação</dt>
+              <dd>AZ&#8209;900 · Microsoft Azure Fundamentals</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="skills reveal">
+        <div class="skill-group">
+          <h3 data-i18n="skills.cloud">Cloud &amp; Orquestração</h3>
+          <ul class="tag-list">
+            <li>Azure Data Factory</li><li>Microsoft Fabric</li><li>Azure SQL</li><li>Git / Azure DevOps</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.db">Banco de Dados</h3>
+          <ul class="tag-list">
+            <li>SQL Server</li><li>T&#8209;SQL</li><li>MySQL</li><li data-i18n="skills.db.modeling">Modelagem Dimensional</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.bi">BI &amp; Analytics</h3>
+          <ul class="tag-list">
+            <li>Power BI</li><li>DAX</li><li>Python (pandas)</li><li>Streamlit</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.lang">Linguagens</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>C#</li><li>SQL</li><li>HTML / CSS / JS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="csection">
+      <p class="csection-eyebrow reveal" data-i18n="exp.eyebrow">02 · Experiência</p>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date" data-i18n="exp.databasers.trainee.date">Desde set/2025</p>
+            <h3 data-i18n="exp.databasers.trainee.role">Trainee de Dados · Databasers</h3>
+            <p data-i18n="exp.databasers.trainee.desc">Desenvolvimento e orquestração de pipelines com Azure Data Factory e Microsoft Fabric, integrando ambientes on-premises e Azure. Administração e otimização de performance de SQL Server. Modelagem de dados e consultas complexas para ETL e dashboards Power BI. Automações em Python e C#.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date" data-i18n="exp.databasers.intern.date">Dez/2024 a set/2025</p>
+            <h3 data-i18n="exp.databasers.intern.role">Estagiário de Dados · Databasers</h3>
+            <p data-i18n="exp.databasers.intern.desc">Apoio no desenvolvimento de consultas SQL e dashboards Power BI, suporte à administração de SQL Server e participação em projetos de automação e integração de sistemas.</p>
+          </div>
+        </li>
+        <li class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="timeline-date" data-i18n="exp.inprex.date">Mar/2022 a dez/2024</p>
+            <h3 data-i18n="exp.inprex.role">Suporte Técnico · InPrex Tecnologia</h3>
+            <p data-i18n="exp.inprex.desc">Help desk e atendimento ao cliente, instalação e configuração de equipamentos. Base de resolução de problemas que levou à transição para a área de dados.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projetos" class="csection">
+      <p class="csection-eyebrow reveal" data-i18n="proj.eyebrow">03 · Projetos</p>
+      <p class="section-lead reveal" data-i18n="proj.lead">Quatro projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional e dashboard.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal glass" id="proj-olist">
+          <div class="project-card-head">
+            <span class="project-index">01</span>
+            <span class="project-tag" data-i18n="proj.olist.tag">Engenharia de Dados</span>
+          </div>
+          <h3 data-i18n="proj.olist.title">Pipeline ETL e Modelagem Dimensional</h3>
+          <p class="project-problem"><strong data-i18n="proj.label.problem">Problema.</strong> <span data-i18n="proj.olist.problem">Dataset de e-commerce com 100 mil pedidos, espalhado em 8 tabelas normalizadas. Responder perguntas de negócio exigia juntar tudo a cada consulta.</span></p>
+          <p class="project-approach"><strong data-i18n="proj.label.approach">Abordagem.</strong> <span data-i18n="proj.olist.approach">Pipeline em Python (extract, transform, load) construindo um star schema com 4 dimensões e 2 fatos, testado automaticamente e publicado em SQLite, Parquet e CSV.</span></p>
+          <p class="project-result"><strong data-i18n="proj.label.result">Resultado.</strong> <span data-i18n="proj.olist.result">Modelo pronto para o Power BI sem transformação adicional, com 5 consultas de negócio documentadas usando CTEs e funções de janela.</span></p>
+          <ul class="tag-list project-stack">
+            <li>Python</li><li>pandas</li><li>SQL</li><li>Power BI</li><li>GitHub Actions</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/VinnySou/olist-etl-powerbi" target="_blank" rel="noopener">GitHub &#8594;</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal glass" id="proj-sql">
+          <div class="project-card-head">
+            <span class="project-index">02</span>
+            <span class="project-tag" data-i18n="proj.sql.tag">SQL Avançado</span>
+          </div>
+          <h3 data-i18n="proj.sql.title">Banco Transacional de Vendas</h3>
+          <p class="project-problem"><strong data-i18n="proj.label.problem">Problema.</strong> <span data-i18n="proj.sql.problem">Mostrar profundidade em T-SQL além de consultas simples: escrita transacional segura, hierarquias organizacionais e tuning de performance.</span></p>
+          <p class="project-approach"><strong data-i18n="proj.label.approach">Abordagem.</strong> <span data-i18n="proj.sql.approach">Schema OLTP normalizado, stored procedure transacional com row locking e rollback automático, CTE recursiva para organograma e segmentação RFM com funções de janela.</span></p>
+          <p class="project-result"><strong data-i18n="proj.label.result">Resultado.</strong> <span data-i18n="proj.sql.result">Toda a lógica de negócio validada automaticamente em CI, incluindo o comportamento de rollback sob falha de estoque.</span></p>
+          <ul class="tag-list project-stack">
+            <li>T&#8209;SQL</li><li>SQL Server</li><li>Stored Procedures</li><li>Python</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/VinnySou/sql-server-vendas-analytics" target="_blank" rel="noopener">GitHub &#8594;</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal glass" id="proj-adf">
+          <div class="project-card-head">
+            <span class="project-index">03</span>
+            <span class="project-tag" data-i18n="proj.adf.tag">Cloud &amp; Orquestração</span>
+          </div>
+          <h3 data-i18n="proj.adf.title">Ingestão com Azure Data Factory</h3>
+          <p class="project-problem"><strong data-i18n="proj.label.problem">Problema.</strong> <span data-i18n="proj.adf.problem">Demonstrar orquestração de pipelines em nuvem no mesmo formato usado em produção, versionado como código.</span></p>
+          <p class="project-approach"><strong data-i18n="proj.label.approach">Abordagem.</strong> <span data-i18n="proj.adf.approach">Pipeline ADF que busca o câmbio USD/BRL na API pública do Banco Central diariamente e grava em Azure SQL via upsert idempotente. Infraestrutura em Bicep, segredo protegido no Key Vault via identidade gerenciada.</span></p>
+          <p class="project-result"><strong data-i18n="proj.label.result">Resultado.</strong> <span data-i18n="proj.adf.result">Repositório pronto para ser conectado direto a um Data Factory real via integração Git.</span></p>
+          <ul class="tag-list project-stack">
+            <li>Azure Data Factory</li><li>Azure SQL</li><li>Key Vault</li><li>Bicep</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/VinnySou/azure-adf-ingestao-bcb" target="_blank" rel="noopener">GitHub &#8594;</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal glass" id="proj-streamlit">
+          <div class="project-card-head">
+            <span class="project-index">04</span>
+            <span class="project-tag" data-i18n="proj.streamlit.tag">Análise de Dados</span>
+          </div>
+          <h3 data-i18n="proj.streamlit.title">Análise do Mercado de TI</h3>
+          <p class="project-problem"><strong data-i18n="proj.label.problem">Problema.</strong> <span data-i18n="proj.streamlit.problem">Painel acadêmico com caminho de arquivo fixo no computador de um integrante, inutilizável por qualquer outra pessoa.</span></p>
+          <p class="project-approach"><strong data-i18n="proj.label.approach">Abordagem.</strong> <span data-i18n="proj.streamlit.approach">Reescrevi o carregamento de dados com upload dinâmico, corrigi a documentação e adicionei o arquivo de dependências que faltava.</span></p>
+          <p class="project-result"><strong data-i18n="proj.label.result">Resultado.</strong> <span data-i18n="proj.streamlit.result">Projeto agora roda para qualquer pessoa, com filtros interativos sobre a Stack Overflow Developer Survey de 65 mil respostas.</span></p>
+          <ul class="tag-list project-stack">
+            <li>Python</li><li>Streamlit</li><li>Pandas</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/VinnySou/pi3-analise-tendencias-ti" target="_blank" rel="noopener">GitHub &#8594;</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="other-projects reveal">
+        <h3 data-i18n="proj.other.title">Outros projetos acadêmicos</h3>
+        <ul class="other-projects-list">
+          <li><a href="https://github.com/VinnySou/prj_IA_Reconhecimento_Celulas" target="_blank" rel="noopener">prj_IA_Reconhecimento_Celulas</a><span data-i18n="proj.other.ia"> · classificação de imagens médicas com PyTorch e EfficientNet-B0</span></li>
+          <li><a href="https://github.com/VinnySou/prj_Campeonato_Futebol_MongoDB" target="_blank" rel="noopener">prj_Campeonato_Futebol_MongoDB</a><span data-i18n="proj.other.futebol"> · modelagem comparada entre SQL e MongoDB</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" class="csection">
+      <p class="csection-eyebrow reveal" data-i18n="contact.eyebrow">04 · Contato</p>
+      <h2 class="contact-title reveal" data-i18n="contact.title">Vamos conversar</h2>
+      <p class="section-lead reveal" data-i18n="contact.lead">Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.</p>
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:viniciusdsouza62@gmail.com">viniciusdsouza62@gmail.com</a>
+        <a class="contact-link" href="https://www.linkedin.com/in/viniciussousilva" target="_blank" rel="noopener">linkedin.com/in/viniciussousilva</a>
+        <a class="contact-link" href="https://github.com/VinnySou" target="_blank" rel="noopener">github.com/VinnySou</a>
+      </div>
+    </section>
+
+    <footer class="content-footer">
+      <p>&copy; <span id="year"></span> Vinícius de Souza Silva</p>
+      <p data-i18n="footer.built">Cariacica, ES · Brasil</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

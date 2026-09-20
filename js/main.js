@@ -1,0 +1,267 @@
+(function () {
+  "use strict";
+
+  var i18n = {
+    pt: {
+      "nav.about": "Sobre",
+      "nav.experience": "Experiência",
+      "nav.projects": "Projetos",
+      "nav.contact": "Contato",
+
+      "hero.eyebrow": "Analista &amp; Engenheiro de Dados",
+      "hero.sub.short": "Dados brutos em decisões de negócio: pipelines, modelagem e dashboards.",
+      "hero.stat.years.unit": "anos",
+      "hero.stat.projects.count": "4",
+      "hero.stat.projects.word": "projetos",
+
+      "about.eyebrow": "01 · Sobre",
+      "about.p1": "Sou trainee de dados na Databasers, uma consultoria especializada, onde atuo de ponta a ponta: da ingestão à entrega do dashboard. No dia a dia, oriento pipelines no Azure Data Factory e no Microsoft Fabric, administro e otimizo bancos SQL Server (on-premises e Azure SQL) e construo soluções analíticas em Power BI.",
+      "about.p2": "Estudo Ciência da Computação na FAESA, com conclusão prevista para 2027, e sou certificado em Microsoft Azure Fundamentals (AZ-900). Estou me preparando para a certificação DP-700 (Fabric Data Engineer Associate).",
+      "about.p3": "Comecei em help desk, migrei para dados através de um estágio e segui como trainee. Hoje busco uma posição de Analista ou Engenheiro de Dados onde eu possa assumir mais responsabilidade sobre arquitetura e qualidade de dados.",
+      "about.fact.location": "Localização",
+      "about.fact.role": "Cargo atual",
+      "about.fact.role.value": "Trainee de Dados, Databasers",
+      "about.fact.education": "Formação",
+      "about.fact.education.value": "Ciência da Computação, FAESA (cursando)",
+      "about.fact.cert": "Certificação",
+
+      "skills.cloud": "Cloud &amp; Orquestração",
+      "skills.db": "Banco de Dados",
+      "skills.db.modeling": "Modelagem Dimensional",
+      "skills.bi": "BI &amp; Analytics",
+      "skills.lang": "Linguagens",
+
+      "exp.eyebrow": "02 · Experiência",
+      "exp.databasers.trainee.date": "Desde set/2025",
+      "exp.databasers.trainee.role": "Trainee de Dados · Databasers",
+      "exp.databasers.trainee.desc": "Desenvolvimento e orquestração de pipelines com Azure Data Factory e Microsoft Fabric, integrando ambientes on-premises e Azure. Administração e otimização de performance de SQL Server. Modelagem de dados e consultas complexas para ETL e dashboards Power BI. Automações em Python e C#.",
+      "exp.databasers.intern.date": "Dez/2024 a set/2025",
+      "exp.databasers.intern.role": "Estagiário de Dados · Databasers",
+      "exp.databasers.intern.desc": "Apoio no desenvolvimento de consultas SQL e dashboards Power BI, suporte à administração de SQL Server e participação em projetos de automação e integração de sistemas.",
+      "exp.inprex.date": "Mar/2022 a dez/2024",
+      "exp.inprex.role": "Suporte Técnico · InPrex Tecnologia",
+      "exp.inprex.desc": "Help desk e atendimento ao cliente, instalação e configuração de equipamentos. Base de resolução de problemas que levou à transição para a área de dados.",
+
+      "proj.eyebrow": "03 · Projetos",
+      "proj.lead": "Quatro projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional e dashboard.",
+      "proj.label.problem": "Problema.",
+      "proj.label.approach": "Abordagem.",
+      "proj.label.result": "Resultado.",
+
+      "proj.olist.tag": "Engenharia de Dados",
+      "proj.olist.title": "Pipeline ETL e Modelagem Dimensional",
+      "proj.olist.problem": "Dataset de e-commerce com 100 mil pedidos, espalhado em 8 tabelas normalizadas. Responder perguntas de negócio exigia juntar tudo a cada consulta.",
+      "proj.olist.approach": "Pipeline em Python (extract, transform, load) construindo um star schema com 4 dimensões e 2 fatos, testado automaticamente e publicado em SQLite, Parquet e CSV.",
+      "proj.olist.result": "Modelo pronto para o Power BI sem transformação adicional, com 5 consultas de negócio documentadas usando CTEs e funções de janela.",
+
+      "proj.sql.tag": "SQL Avançado",
+      "proj.sql.title": "Banco Transacional de Vendas",
+      "proj.sql.problem": "Mostrar profundidade em T-SQL além de consultas simples: escrita transacional segura, hierarquias organizacionais e tuning de performance.",
+      "proj.sql.approach": "Schema OLTP normalizado, stored procedure transacional com row locking e rollback automático, CTE recursiva para organograma e segmentação RFM com funções de janela.",
+      "proj.sql.result": "Toda a lógica de negócio validada automaticamente em CI, incluindo o comportamento de rollback sob falha de estoque.",
+
+      "proj.adf.tag": "Cloud &amp; Orquestração",
+      "proj.adf.title": "Ingestão com Azure Data Factory",
+      "proj.adf.problem": "Demonstrar orquestração de pipelines em nuvem no mesmo formato usado em produção, versionado como código.",
+      "proj.adf.approach": "Pipeline ADF que busca o câmbio USD/BRL na API pública do Banco Central diariamente e grava em Azure SQL via upsert idempotente. Infraestrutura em Bicep, segredo protegido no Key Vault via identidade gerenciada.",
+      "proj.adf.result": "Repositório pronto para ser conectado direto a um Data Factory real via integração Git.",
+
+      "proj.streamlit.tag": "Análise de Dados",
+      "proj.streamlit.title": "Análise do Mercado de TI",
+      "proj.streamlit.problem": "Painel acadêmico com caminho de arquivo fixo no computador de um integrante, inutilizável por qualquer outra pessoa.",
+      "proj.streamlit.approach": "Reescrevi o carregamento de dados com upload dinâmico, corrigi a documentação e adicionei o arquivo de dependências que faltava.",
+      "proj.streamlit.result": "Projeto agora roda para qualquer pessoa, com filtros interativos sobre a Stack Overflow Developer Survey de 65 mil respostas.",
+
+      "proj.other.title": "Outros projetos acadêmicos",
+      "proj.other.ia": " · classificação de imagens médicas com PyTorch e EfficientNet-B0",
+      "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB",
+
+      "contact.eyebrow": "04 · Contato",
+      "contact.title": "Vamos conversar",
+      "contact.lead": "Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.",
+
+      "footer.built": "Cariacica, ES · Brasil"
+    },
+    en: {
+      "nav.about": "About",
+      "nav.experience": "Experience",
+      "nav.projects": "Projects",
+      "nav.contact": "Contact",
+
+      "hero.eyebrow": "Data Analyst &amp; Data Engineer",
+      "hero.sub.short": "Raw data into business decisions: pipelines, modeling and dashboards.",
+      "hero.stat.years.unit": "years",
+      "hero.stat.projects.count": "4",
+      "hero.stat.projects.word": "projects",
+
+      "about.eyebrow": "01 · About",
+      "about.p1": "I'm a data trainee at Databasers, a specialized data consultancy, working end to end: from ingestion to the finished dashboard. Day to day, I orchestrate pipelines in Azure Data Factory and Microsoft Fabric, administer and tune SQL Server databases (on-premises and Azure SQL), and build analytical solutions in Power BI.",
+      "about.p2": "I'm studying Computer Science at FAESA, graduating in 2027, and I'm Microsoft Azure Fundamentals (AZ-900) certified. I'm currently preparing for the DP-700 certification (Fabric Data Engineer Associate).",
+      "about.p3": "I started in help desk, moved into data through an internship, and continued as a trainee. Now I'm looking for a Data Analyst or Data Engineer role where I can take on more ownership of architecture and data quality.",
+      "about.fact.location": "Location",
+      "about.fact.role": "Current role",
+      "about.fact.role.value": "Data Trainee, Databasers",
+      "about.fact.education": "Education",
+      "about.fact.education.value": "Computer Science, FAESA (in progress)",
+      "about.fact.cert": "Certification",
+
+      "skills.cloud": "Cloud &amp; Orchestration",
+      "skills.db": "Databases",
+      "skills.db.modeling": "Dimensional Modeling",
+      "skills.bi": "BI &amp; Analytics",
+      "skills.lang": "Languages",
+
+      "exp.eyebrow": "02 · Experience",
+      "exp.databasers.trainee.date": "Since Sep/2025",
+      "exp.databasers.trainee.role": "Data Trainee · Databasers",
+      "exp.databasers.trainee.desc": "Building and orchestrating pipelines with Azure Data Factory and Microsoft Fabric, integrating on-premises and Azure environments. Administering and tuning SQL Server performance. Data modeling and complex queries supporting ETL and Power BI dashboards. Automation with Python and C#.",
+      "exp.databasers.intern.date": "Dec/2024 to Sep/2025",
+      "exp.databasers.intern.role": "Data Intern · Databasers",
+      "exp.databasers.intern.desc": "Supported SQL query development and Power BI dashboards, assisted with SQL Server administration, and took part in automation and systems integration projects.",
+      "exp.inprex.date": "Mar/2022 to Dec/2024",
+      "exp.inprex.role": "Technical Support · InPrex Tecnologia",
+      "exp.inprex.desc": "Help desk and customer support, equipment installation and configuration. The troubleshooting foundation that led to the move into data.",
+
+      "proj.eyebrow": "03 · Projects",
+      "proj.lead": "Four projects covering the full cycle: ingestion, modeling, transactional database and dashboard.",
+      "proj.label.problem": "Problem.",
+      "proj.label.approach": "Approach.",
+      "proj.label.result": "Result.",
+
+      "proj.olist.tag": "Data Engineering",
+      "proj.olist.title": "ETL Pipeline and Dimensional Modeling",
+      "proj.olist.problem": "An e-commerce dataset with 100k orders spread across 8 normalized tables. Answering business questions meant joining everything on every query.",
+      "proj.olist.approach": "A Python pipeline (extract, transform, load) building a star schema with 4 dimensions and 2 fact tables, automatically tested and published to SQLite, Parquet and CSV.",
+      "proj.olist.result": "A model ready for Power BI with no further transformation, plus 5 documented business queries using CTEs and window functions.",
+
+      "proj.sql.tag": "Advanced SQL",
+      "proj.sql.title": "Transactional Sales Database",
+      "proj.sql.problem": "Demonstrating T-SQL depth beyond simple queries: safe transactional writes, organizational hierarchies and performance tuning.",
+      "proj.sql.approach": "A normalized OLTP schema, a transactional stored procedure with row locking and automatic rollback, a recursive CTE for the org chart, and RFM segmentation with window functions.",
+      "proj.sql.result": "All business logic automatically validated in CI, including rollback behavior under insufficient stock.",
+
+      "proj.adf.tag": "Cloud &amp; Orchestration",
+      "proj.adf.title": "Azure Data Factory Ingestion",
+      "proj.adf.problem": "Demonstrating cloud pipeline orchestration in the same format used in production, version-controlled as code.",
+      "proj.adf.approach": "An ADF pipeline that pulls the USD/BRL exchange rate from the Central Bank's public API daily and upserts it into Azure SQL. Infrastructure defined in Bicep, with the credential protected in Key Vault via managed identity.",
+      "proj.adf.result": "A repository ready to be connected directly to a real Data Factory through Git integration.",
+
+      "proj.streamlit.tag": "Data Analysis",
+      "proj.streamlit.title": "Tech Job Market Analysis",
+      "proj.streamlit.problem": "An academic dashboard with a hardcoded file path on one teammate's computer, unusable by anyone else.",
+      "proj.streamlit.approach": "Rewrote the data loading step with a dynamic upload option, fixed the documentation, and added the missing dependency file.",
+      "proj.streamlit.result": "The project now runs for anyone, with interactive filters over the 65k-response Stack Overflow Developer Survey.",
+
+      "proj.other.title": "Other academic projects",
+      "proj.other.ia": " · medical image classification with PyTorch and EfficientNet-B0",
+      "proj.other.futebol": " · a schema modeled in both SQL and MongoDB",
+
+      "contact.eyebrow": "04 · Contact",
+      "contact.title": "Let's talk",
+      "contact.lead": "Open to Data Analyst and Data Engineer opportunities. Reach out directly by email or LinkedIn.",
+
+      "footer.built": "Cariacica, ES · Brazil"
+    }
+  };
+
+  var STORAGE_KEY = "vss-portfolio-lang";
+  var root = document.documentElement;
+
+  function applyLang(lang) {
+    var dict = i18n[lang] || i18n.pt;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+    root.setAttribute("lang", lang === "en" ? "en" : "pt-BR");
+    document.querySelectorAll(".lang-opt").forEach(function (el) {
+      el.classList.toggle("is-active", el.getAttribute("data-lang") === lang);
+    });
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  function initLangToggle() {
+    var toggles = document.querySelectorAll(".lang-toggle");
+    if (!toggles.length) return;
+    var current = "pt";
+    try { current = localStorage.getItem(STORAGE_KEY) || "pt"; } catch (e) {}
+    applyLang(current);
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener("click", function () {
+        current = current === "pt" ? "en" : "pt";
+        applyLang(current);
+      });
+    });
+  }
+
+  function initScrollSpy() {
+    var links = document.querySelectorAll(".side-nav-link");
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var sections = Array.prototype.map.call(links, function (link) {
+      return document.getElementById(link.getAttribute("data-section"));
+    }).filter(Boolean);
+
+    var setActive = function (id) {
+      links.forEach(function (link) {
+        link.classList.toggle("is-active", link.getAttribute("data-section") === id);
+      });
+    };
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
+  function initMobileNav() {
+    var burger = document.getElementById("nav-burger");
+    var nav = document.getElementById("mobile-nav");
+    if (!burger || !nav) return;
+    burger.addEventListener("click", function () {
+      var isOpen = nav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", String(isOpen));
+    });
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  function initReveal() {
+    var items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(function (el) { el.classList.add("is-visible"); });
+      return;
+    }
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+    items.forEach(function (el) { observer.observe(el); });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initLangToggle();
+    initMobileNav();
+    initReveal();
+    initScrollSpy();
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  });
+})();
