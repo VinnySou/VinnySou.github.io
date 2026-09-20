@@ -83,7 +83,7 @@
       "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB, incluindo o script de migração",
 
       "articles.eyebrow": "04 · Artigos",
-      "articles.lead": "Escrevo sobre SQL Server no blog técnico da Databasers.",
+      "articles.lead": "Escrevo sobre SQL Server e dados: aqui no portfólio, no blog da Databasers e no LinkedIn.",
       "articles.read": "Ler no blog da Databasers &#8594;",
       "articles.more": "Ver todos os artigos no blog da Databasers &#8594;",
       "articles.varbinary.date": "15/05/2026",
@@ -182,7 +182,7 @@
       "proj.other.futebol": " · a schema modeled in both SQL and MongoDB, including the migration script",
 
       "articles.eyebrow": "04 · Articles",
-      "articles.lead": "I write about SQL Server on Databasers' technical blog.",
+      "articles.lead": "I write about SQL Server and data: here on the portfolio, on the Databasers blog and on LinkedIn.",
       "articles.read": "Read on the Databasers blog &#8594;",
       "articles.more": "See all articles on the Databasers blog &#8594;",
       "articles.varbinary.date": "05/15/2026",

@@ -272,18 +272,27 @@
 
     <section id="artigos" class="csection">
       <p class="csection-eyebrow reveal" data-i18n="articles.eyebrow">04 · Artigos</p>
-      <p class="section-lead reveal" data-i18n="articles.lead">Escrevo sobre SQL Server no blog técnico da Databasers.</p>
+      <p class="section-lead reveal" data-i18n="articles.lead">Escrevo sobre SQL Server e dados: aqui no portfólio, no blog da Databasers e no LinkedIn.</p>
 
+      <!--
+        Como adicionar um novo artigo:
+        - Nativo (hospedado aqui): duplique artigos/_template.html, escreva o
+          conteúdo, e adicione um card abaixo com href="artigos/seu-arquivo.html"
+          (sem target="_blank") e <span class="article-source">Portfólio</span>.
+        - Databasers ou LinkedIn: adicione um card com o link externo,
+          target="_blank" rel="noopener", e <span class="article-source"> com o
+          nome da plataforma.
+      -->
       <div class="articles-list">
         <a class="article-card reveal glass" href="https://databasers.com.br/blog/details/O%20VARBINARY%20%C3%A9%20um%20tipo%20de%20dado%20do%20SQL%20Server%20destinado%20ao%20armazenamento%20de%20dados%20bin%C3%A1rios%20de%20tamanho%20vari%C3%A1vel.%20Diferente%20dos%20tipos%20convencionais..." target="_blank" rel="noopener">
-          <p class="article-meta"><span data-i18n="articles.varbinary.date">15/05/2026</span> · <span data-i18n="articles.varbinary.read">10 min de leitura</span></p>
+          <p class="article-meta"><span data-i18n="articles.varbinary.date">15/05/2026</span> · <span data-i18n="articles.varbinary.read">10 min de leitura</span><span class="article-source">Databasers</span></p>
           <h3 data-i18n="articles.varbinary.title">Como gerar arquivos usando colunas varbinary como fonte — SQL Server</h3>
           <p data-i18n="articles.varbinary.excerpt">Como guardar e servir arquivos (PDFs, imagens, documentos) direto de colunas VARBINARY(MAX), centralizando backup, controle de acesso e auditoria no próprio banco.</p>
           <span class="article-link" data-i18n="articles.read">Ler no blog da Databasers &#8594;</span>
         </a>
 
         <a class="article-card reveal glass" href="https://databasers.com.br/blog/details/Para%20quem%20trabalha%20com%20SQL%20Server,%20%C3%A9%20muito%20comum%20a%20necessidade%20de%20reorganizar%20dados%20para%20atender%20diferentes%20cen%C3%A1rios,%20como%20gera%C3%A7%C3%A3o%20de%20relat%C3%B3rios..." target="_blank" rel="noopener">
-          <p class="article-meta"><span data-i18n="articles.pivot.date">07/01/2026</span> · <span data-i18n="articles.pivot.read">15 min de leitura</span></p>
+          <p class="article-meta"><span data-i18n="articles.pivot.date">07/01/2026</span> · <span data-i18n="articles.pivot.read">15 min de leitura</span><span class="article-source">Databasers</span></p>
           <h3 data-i18n="articles.pivot.title">PIVOT e UNPIVOT — o que é e como usar</h3>
           <p data-i18n="articles.pivot.excerpt">Como usar os operadores PIVOT e UNPIVOT do SQL Server para transformar linhas em colunas (e o caminho inverso) direto na query, sem gambiarra de CASE WHEN nem tratamento extra no ETL.</p>
           <span class="article-link" data-i18n="articles.read">Ler no blog da Databasers &#8594;</span>

@@ -10,6 +10,7 @@ index.html      marcação e conteúdo (com chaves data-i18n para tradução)
 css/style.css   design system, layout e o efeito de vidro (liquid glass)
 js/main.js      dicionário de tradução PT/EN, scrollspy, menu mobile, animações
 assets/         favicon
+artigos/        artigos publicados direto no site (ver artigos/README.md)
 ```
 
 ## Rodar localmente
@@ -40,3 +41,9 @@ GitHub Pages, se for domínio raiz). Depois, configure o domínio em
 Todo texto visível tem uma chave `data-i18n` no HTML e sua tradução em
 `js/main.js` (objetos `i18n.pt` e `i18n.en`). Para atualizar um texto, edite os
 dois idiomas juntos para não ficarem dessincronizados.
+
+## Publicar um artigo
+
+Ver [`artigos/README.md`](artigos/README.md): artigos nativos (páginas hospedadas
+aqui) e cards linkando para posts externos (Databasers, LinkedIn) seguem o mesmo
+passo a passo.
