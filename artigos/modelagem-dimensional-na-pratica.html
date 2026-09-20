@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelagem dimensional na prática · Vinícius de Souza Silva</title>
+<meta name="description" content="As decisões por trás do meu pipeline ETL: por que duas tabelas fato, por que surrogate keys, e o que isso muda na hora de montar um dashboard.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="article-header glass">
+  <a href="../index.html#artigos" class="article-back">&#8592; Portfólio</a>
+  <a href="../index.html" class="brand">VSS<span class="brand-dot">.</span></a>
+</header>
+
+<main class="article-page">
+  <article class="prose">
+    <p class="article-meta">
+      <span>20/09/2026</span> · <span>7 min de leitura</span>
+    </p>
+    <h1>Modelagem dimensional na prática: as decisões por trás do meu pipeline ETL</h1>
+
+    <p>Quando comecei a montar um pipeline de ETL do zero para praticar fora do
+    trabalho, a primeira tentação foi pular direto para o código: ler o CSV, jogar
+    numa tabela, conectar o Power BI e pronto. Funciona para um protótipo, mas não é
+    o que sustenta um dashboard de verdade. A parte que mais me ensinou não foi o
+    Python, foi decidir <em>como modelar</em> os dados antes de escrever a primeira
+    linha de transformação.</p>
+
+    <p>Usei o dataset público da Olist (cerca de 100 mil pedidos de um marketplace
+    brasileiro, espalhados em 8 tabelas normalizadas) para construir um
+    <a href="https://github.com/VinnySou/olist-etl-powerbi" target="_blank" rel="noopener">pipeline ETL completo</a>,
+    do CSV bruto até um modelo pronto para Power BI. Este artigo é sobre as decisões
+    de modelagem, não sobre o código em si.</p>
+
+    <h2>O problema do dado normalizado</h2>
+
+    <p>No formato original, responder “qual a taxa de atraso de entrega por estado?”
+    exige juntar pedidos, clientes e itens a cada consulta. Isso não escala para um
+    dashboard: toda visualização vira uma query nova com cinco joins. A solução
+    clássica é um <strong>star schema</strong>: dimensões que descrevem o contexto
+    (cliente, produto, vendedor, data) e tabelas fato que guardam os eventos
+    mensuráveis (pedidos, itens vendidos), já pré-juntadas na granularidade certa.</p>
+
+    <h2>Por que duas tabelas fato, não uma</h2>
+
+    <p>O primeiro instinto é criar uma fato só. Mas um pedido tem campos que fazem
+    sentido no nível do pedido (valor total pago, nota de avaliação, atraso na
+    entrega) e campos que só existem no nível do item (preço unitário, frete,
+    vendedor). Colocar tudo em uma fato no grão de item obriga a repetir o valor
+    pago e a nota em cada linha de item do mesmo pedido — e qualquer soma de
+    “receita” feita ingenuamente no Power BI conta esse valor várias vezes.</p>
+
+    <p>A solução foi ter duas tabelas fato em grãos diferentes:</p>
+
+    <ul>
+      <li><code>fact_orders</code> — uma linha por pedido: pagamento, parcelas, nota,
+      tempo de entrega.</li>
+      <li><code>fact_order_items</code> — uma linha por item de pedido: preço,
+      frete, ligado a produto e vendedor.</li>
+    </ul>
+
+    <p>As duas compartilham as mesmas dimensões (cliente, data), então o Power BI
+    consegue cruzar as duas sem problema — é só cuidado na hora de montar visuais que
+    misturem métricas dos dois grãos.</p>
+
+    <h2>Surrogate keys em vez dos IDs originais</h2>
+
+    <p>O dataset usa IDs de texto (hash) como chave primária. Funciona, mas junções
+    por string são mais lentas e o motor de compressão do Power BI (VertiPaq) fica
+    menos eficiente com colunas de alta cardinalidade em texto. Troquei por chaves
+    substitutas inteiras sequenciais em cada dimensão:</p>
+
+    <pre><code>dim.insert(0, "customer_sk", dim.index + 1)</code></pre>
+
+    <p>É uma linha de código, mas é a diferença entre um modelo que qualquer
+    ferramenta de BI relaciona de forma eficiente e um que força concatenação de
+    strings gigantes.</p>
+
+    <h2>O que isso muda na prática</h2>
+
+    <p>No trabalho, isso aparece toda vez que preciso desenhar uma nova fonte de dado
+    para o Power BI: antes de escrever a primeira query no Azure Data Factory, vale a
+    pena perguntar qual é o grão de cada fato e quais dimensões realmente se repetem.
+    Errar essa parte não quebra o pipeline, mas produz números errados de forma
+    silenciosa — o tipo de bug que só aparece quando alguém do time de negócio
+    pergunta “por que esse total não bate com a planilha”.</p>
+
+    <p>O código completo, os testes e as consultas SQL de exemplo estão no
+    <a href="https://github.com/VinnySou/olist-etl-powerbi" target="_blank" rel="noopener">repositório no GitHub</a>.</p>
+  </article>
+</main>
+
+<footer class="content-footer article-footer">
+  <p>&copy; <span id="year"></span> Vinícius de Souza Silva</p>
+  <p>Cariacica, ES · Brasil</p>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
