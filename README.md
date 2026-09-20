@@ -47,3 +47,23 @@ dois idiomas juntos para não ficarem dessincronizados.
 Ver [`artigos/README.md`](artigos/README.md): artigos nativos (páginas hospedadas
 aqui) e cards linkando para posts externos (Databasers, LinkedIn) seguem o mesmo
 passo a passo.
+
+## Seção "Mais no GitHub"
+
+A lista em `#projetos` sob "Mais no GitHub" **não é hardcoded**: `initOtherProjects()`
+em `js/main.js` busca `api.github.com/users/VinnySou/repos` no carregamento da
+página e monta a lista a partir daí (nome + descrição do repositório). Qualquer
+repositório público novo aparece sozinho, sem editar o site — só cuidar para o
+repositório ter uma descrição decente (`gh repo edit <repo> --description "..."`).
+
+Os 5 projetos em destaque (cards grandes com Problema/Abordagem/Resultado) **não**
+entram nessa lista automática — ficam de fora via `FEATURED_REPOS` no topo do
+`main.js`, porque esse texto é escrito à mão e não dá pra gerar bem a partir só do
+nome/descrição do repositório. Pra promover um projeto novo a card principal, é
+edição manual em `index.html` mesmo (adicionar o nome dele em `FEATURED_REPOS`
+evita duplicar na lista automática).
+
+`HIDDEN_REPOS` no mesmo arquivo esconde repositórios que não têm conteúdo pra
+mostrar (o site em si, repositórios de teste, etc.). Se a API do GitHub estiver
+fora do ar ou o limite de requisições for atingido, a lista estática que já está
+no `index.html` continua visível como fallback.

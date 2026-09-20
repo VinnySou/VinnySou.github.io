@@ -79,8 +79,10 @@
       "proj.streamlit.approach": "Reescrevi o carregamento de dados com upload dinâmico, corrigi a documentação e adicionei o arquivo de dependências que faltava.",
       "proj.streamlit.result": "Projeto agora roda para qualquer pessoa, com filtros interativos sobre a Stack Overflow Developer Survey de 65 mil respostas.",
 
-      "proj.other.title": "Outros projetos acadêmicos",
-      "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB, incluindo o script de migração",
+      "proj.other.title": "Mais no GitHub",
+      "proj.other.futebol_mysql": " · CRUD e relatórios de campeonato de futebol em Python e MySQL",
+      "proj.other.futebol": " · o mesmo domínio migrado para MongoDB, com o script de migração incluído",
+      "proj.other.barbearia": " · sistema desktop em C# / .NET para gestão de barbearia",
 
       "articles.eyebrow": "04 · Artigos",
       "articles.lead": "Escrevo sobre SQL Server e dados: aqui no portfólio, no blog da Databasers e no LinkedIn.",
@@ -183,8 +185,10 @@
       "proj.streamlit.approach": "Rewrote the data loading step with a dynamic upload option, fixed the documentation, and added the missing dependency file.",
       "proj.streamlit.result": "The project now runs for anyone, with interactive filters over the 65k-response Stack Overflow Developer Survey.",
 
-      "proj.other.title": "Other academic projects",
-      "proj.other.futebol": " · a schema modeled in both SQL and MongoDB, including the migration script",
+      "proj.other.title": "More on GitHub",
+      "proj.other.futebol_mysql": " · CRUD and reports for a football championship in Python and MySQL",
+      "proj.other.futebol": " · the same domain migrated to MongoDB, including the migration script",
+      "proj.other.barbearia": " · desktop system in C# / .NET for barbershop management",
 
       "articles.eyebrow": "04 · Articles",
       "articles.lead": "I write about SQL Server and data: here on the portfolio, on the Databasers blog and on LinkedIn.",
@@ -304,11 +308,75 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
+  // Repositorios ja mostrados como cards principais (nao devem se repetir aqui),
+  // mais os que nao tem conteudo suficiente pra mostrar (por nome, case-insensitive).
+  var FEATURED_REPOS = [
+    "olist-etl-powerbi",
+    "sql-server-vendas-analytics",
+    "azure-adf-ingestao-bcb",
+    "pi3-analise-tendencias-ti",
+    "prj_ia_reconhecimento_celulas",
+  ];
+  var HIDDEN_REPOS = [
+    "vinnysou.github.io",
+    "prj_monitoramento_sono",
+    "teste",
+    "desktop-tutorial",
+  ];
+
+  function renderOtherProjects(list, repos) {
+    list.innerHTML = "";
+    if (!repos.length) {
+      list.remove();
+      return;
+    }
+    repos.forEach(function (repo) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = repo.html_url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = repo.name;
+      var span = document.createElement("span");
+      span.textContent = " · " + (repo.description || (repo.language || "código") );
+      li.appendChild(a);
+      li.appendChild(span);
+      list.appendChild(li);
+    });
+  }
+
+  function initOtherProjects() {
+    var list = document.getElementById("other-projects-list");
+    if (!list) return;
+    var user = list.getAttribute("data-github-user");
+    if (!user) return;
+
+    fetch("https://api.github.com/users/" + user + "/repos?type=owner&sort=created&direction=desc&per_page=100")
+      .then(function (res) {
+        if (!res.ok) throw new Error("GitHub API error " + res.status);
+        return res.json();
+      })
+      .then(function (repos) {
+        var filtered = repos.filter(function (repo) {
+          if (repo.fork) return false;
+          var name = repo.name.toLowerCase();
+          if (FEATURED_REPOS.indexOf(name) !== -1) return false;
+          if (HIDDEN_REPOS.indexOf(name) !== -1) return false;
+          return true;
+        });
+        renderOtherProjects(list, filtered);
+      })
+      .catch(function () {
+        // API indisponivel ou limite de taxa: mantem a lista estatica do HTML.
+      });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLangToggle();
     initMobileNav();
     initReveal();
     initScrollSpy();
+    initOtherProjects();
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
