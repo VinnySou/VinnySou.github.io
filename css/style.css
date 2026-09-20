@@ -485,6 +485,50 @@ a { color: inherit; text-decoration: none; }
 .other-projects-list a:hover { color: var(--accent); }
 .other-projects-list span { color: var(--text-faint); font-size: 14.5px; }
 
+/* ---------- Articles ---------- */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.article-card {
+  display: block;
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.article-card:hover { transform: translateY(-2px); }
+.article-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+.article-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+.article-card p:not(.article-meta) {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+.article-link {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+}
+.article-card:hover .article-link { text-decoration: underline; }
+
+.articles-more { font-size: 14.5px; }
+.articles-more a { color: var(--text-muted); font-weight: 500; }
+.articles-more a:hover { color: var(--accent); }
+
 /* ---------- Contact ---------- */
 .contact-links {
   display: flex;

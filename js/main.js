@@ -6,6 +6,7 @@
       "nav.about": "Sobre",
       "nav.experience": "Experiência",
       "nav.projects": "Projetos",
+      "nav.articles": "Artigos",
       "nav.contact": "Contato",
 
       "hero.eyebrow": "Analista &amp; Engenheiro de Dados",
@@ -81,7 +82,20 @@
       "proj.other.title": "Outros projetos acadêmicos",
       "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB, incluindo o script de migração",
 
-      "contact.eyebrow": "04 · Contato",
+      "articles.eyebrow": "04 · Artigos",
+      "articles.lead": "Escrevo sobre SQL Server no blog técnico da Databasers.",
+      "articles.read": "Ler no blog da Databasers &#8594;",
+      "articles.more": "Ver todos os artigos no blog da Databasers &#8594;",
+      "articles.varbinary.date": "15/05/2026",
+      "articles.varbinary.read": "10 min de leitura",
+      "articles.varbinary.title": "Como gerar arquivos usando colunas varbinary como fonte — SQL Server",
+      "articles.varbinary.excerpt": "Como guardar e servir arquivos (PDFs, imagens, documentos) direto de colunas VARBINARY(MAX), centralizando backup, controle de acesso e auditoria no próprio banco.",
+      "articles.pivot.date": "07/01/2026",
+      "articles.pivot.read": "15 min de leitura",
+      "articles.pivot.title": "PIVOT e UNPIVOT — o que é e como usar",
+      "articles.pivot.excerpt": "Como usar os operadores PIVOT e UNPIVOT do SQL Server para transformar linhas em colunas (e o caminho inverso) direto na query, sem gambiarra de CASE WHEN nem tratamento extra no ETL.",
+
+      "contact.eyebrow": "05 · Contato",
       "contact.title": "Vamos conversar",
       "contact.lead": "Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.",
 
@@ -91,6 +105,7 @@
       "nav.about": "About",
       "nav.experience": "Experience",
       "nav.projects": "Projects",
+      "nav.articles": "Articles",
       "nav.contact": "Contact",
 
       "hero.eyebrow": "Data Analyst &amp; Data Engineer",
@@ -166,7 +181,20 @@
       "proj.other.title": "Other academic projects",
       "proj.other.futebol": " · a schema modeled in both SQL and MongoDB, including the migration script",
 
-      "contact.eyebrow": "04 · Contact",
+      "articles.eyebrow": "04 · Articles",
+      "articles.lead": "I write about SQL Server on Databasers' technical blog.",
+      "articles.read": "Read on the Databasers blog &#8594;",
+      "articles.more": "See all articles on the Databasers blog &#8594;",
+      "articles.varbinary.date": "05/15/2026",
+      "articles.varbinary.read": "10 min read",
+      "articles.varbinary.title": "Generating files from varbinary columns in SQL Server",
+      "articles.varbinary.excerpt": "How to store and serve files (PDFs, images, documents) directly from VARBINARY(MAX) columns, keeping backup, access control and auditing inside the database itself.",
+      "articles.pivot.date": "01/07/2026",
+      "articles.pivot.read": "15 min read",
+      "articles.pivot.title": "PIVOT and UNPIVOT — what they are and how to use them",
+      "articles.pivot.excerpt": "Using SQL Server's PIVOT and UNPIVOT operators to turn rows into columns (and back) directly in the query, without a CASE WHEN workaround or extra ETL handling.",
+
+      "contact.eyebrow": "05 · Contact",
       "contact.title": "Let's talk",
       "contact.lead": "Open to Data Analyst and Data Engineer opportunities. Reach out directly by email or LinkedIn.",
 
