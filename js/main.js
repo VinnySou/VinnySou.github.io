@@ -11,11 +11,11 @@
       "hero.eyebrow": "Analista &amp; Engenheiro de Dados",
       "hero.sub.short": "Dados brutos em decisões de negócio: pipelines, modelagem e dashboards.",
       "hero.stat.years.unit": "anos",
-      "hero.stat.projects.count": "4",
+      "hero.stat.projects.count": "5",
       "hero.stat.projects.word": "projetos",
 
       "about.eyebrow": "01 · Sobre",
-      "about.p1": "Sou trainee de dados na Databasers, uma consultoria especializada, onde atuo de ponta a ponta: da ingestão à entrega do dashboard. No dia a dia, oriento pipelines no Azure Data Factory e no Microsoft Fabric, administro e otimizo bancos SQL Server (on-premises e Azure SQL) e construo soluções analíticas em Power BI.",
+      "about.p1": "Sou trainee de dados na Databasers, uma consultoria especializada, onde atuo de ponta a ponta: da ingestão à entrega do dashboard. No dia a dia, oriento pipelines no Azure Data Factory e no Microsoft Fabric, e atuo como DBA de bancos SQL Server (on-premises e Azure SQL): administração, monitoramento, otimização de performance e construção de soluções analíticas em Power BI.",
       "about.p2": "Estudo Ciência da Computação na FAESA, com conclusão prevista para 2027, e sou certificado em Microsoft Azure Fundamentals (AZ-900). Estou me preparando para a certificação DP-700 (Fabric Data Engineer Associate).",
       "about.p3": "Comecei em help desk, migrei para dados através de um estágio e segui como trainee. Hoje busco uma posição de Analista ou Engenheiro de Dados onde eu possa assumir mais responsabilidade sobre arquitetura e qualidade de dados.",
       "about.fact.location": "Localização",
@@ -43,7 +43,13 @@
       "exp.inprex.desc": "Help desk e atendimento ao cliente, instalação e configuração de equipamentos. Base de resolução de problemas que levou à transição para a área de dados.",
 
       "proj.eyebrow": "03 · Projetos",
-      "proj.lead": "Quatro projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional e dashboard.",
+      "proj.lead": "Cinco projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional, dashboard e machine learning.",
+
+      "proj.ia.tag": "Machine Learning",
+      "proj.ia.title": "Classificação de Células com PyTorch",
+      "proj.ia.problem": "Classificar imagens de células sanguíneas em 4 tipos ligados à Leucemia Linfoblástica Aguda, a partir de um dataset público de 3.242 imagens.",
+      "proj.ia.approach": "Fine-tuning de uma EfficientNet-B0 em PyTorch, com early stopping e split treino/validação/teste, servido por uma interface Streamlit para classificar novas imagens.",
+      "proj.ia.result": "99% de acurácia no conjunto de teste (487 imagens nunca vistas no treino), com precisão e recall acima de 0.95 em todas as 4 classes.",
       "proj.label.problem": "Problema.",
       "proj.label.approach": "Abordagem.",
       "proj.label.result": "Resultado.",
@@ -73,8 +79,7 @@
       "proj.streamlit.result": "Projeto agora roda para qualquer pessoa, com filtros interativos sobre a Stack Overflow Developer Survey de 65 mil respostas.",
 
       "proj.other.title": "Outros projetos acadêmicos",
-      "proj.other.ia": " · classificação de imagens médicas com PyTorch e EfficientNet-B0",
-      "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB",
+      "proj.other.futebol": " · modelagem comparada entre SQL e MongoDB, incluindo o script de migração",
 
       "contact.eyebrow": "04 · Contato",
       "contact.title": "Vamos conversar",
@@ -91,11 +96,11 @@
       "hero.eyebrow": "Data Analyst &amp; Data Engineer",
       "hero.sub.short": "Raw data into business decisions: pipelines, modeling and dashboards.",
       "hero.stat.years.unit": "years",
-      "hero.stat.projects.count": "4",
+      "hero.stat.projects.count": "5",
       "hero.stat.projects.word": "projects",
 
       "about.eyebrow": "01 · About",
-      "about.p1": "I'm a data trainee at Databasers, a specialized data consultancy, working end to end: from ingestion to the finished dashboard. Day to day, I orchestrate pipelines in Azure Data Factory and Microsoft Fabric, administer and tune SQL Server databases (on-premises and Azure SQL), and build analytical solutions in Power BI.",
+      "about.p1": "I'm a data trainee at Databasers, a specialized data consultancy, working end to end: from ingestion to the finished dashboard. Day to day, I orchestrate pipelines in Azure Data Factory and Microsoft Fabric, and act as DBA for SQL Server databases (on-premises and Azure SQL): administration, monitoring, performance tuning, and building analytical solutions in Power BI.",
       "about.p2": "I'm studying Computer Science at FAESA, graduating in 2027, and I'm Microsoft Azure Fundamentals (AZ-900) certified. I'm currently preparing for the DP-700 certification (Fabric Data Engineer Associate).",
       "about.p3": "I started in help desk, moved into data through an internship, and continued as a trainee. Now I'm looking for a Data Analyst or Data Engineer role where I can take on more ownership of architecture and data quality.",
       "about.fact.location": "Location",
@@ -123,7 +128,13 @@
       "exp.inprex.desc": "Help desk and customer support, equipment installation and configuration. The troubleshooting foundation that led to the move into data.",
 
       "proj.eyebrow": "03 · Projects",
-      "proj.lead": "Four projects covering the full cycle: ingestion, modeling, transactional database and dashboard.",
+      "proj.lead": "Five projects covering the full cycle: ingestion, modeling, transactional database, dashboard and machine learning.",
+
+      "proj.ia.tag": "Machine Learning",
+      "proj.ia.title": "Blood Cell Classification with PyTorch",
+      "proj.ia.problem": "Classifying blood cell images into 4 types linked to Acute Lymphoblastic Leukemia, from a public dataset of 3,242 images.",
+      "proj.ia.approach": "Fine-tuned an EfficientNet-B0 in PyTorch, with early stopping and a train/validation/test split, served through a Streamlit app to classify new images.",
+      "proj.ia.result": "99% accuracy on the test set (487 images never seen during training), with precision and recall above 0.95 across all 4 classes.",
       "proj.label.problem": "Problem.",
       "proj.label.approach": "Approach.",
       "proj.label.result": "Result.",
@@ -153,8 +164,7 @@
       "proj.streamlit.result": "The project now runs for anyone, with interactive filters over the 65k-response Stack Overflow Developer Survey.",
 
       "proj.other.title": "Other academic projects",
-      "proj.other.ia": " · medical image classification with PyTorch and EfficientNet-B0",
-      "proj.other.futebol": " · a schema modeled in both SQL and MongoDB",
+      "proj.other.futebol": " · a schema modeled in both SQL and MongoDB, including the migration script",
 
       "contact.eyebrow": "04 · Contact",
       "contact.title": "Let's talk",
