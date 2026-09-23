@@ -5,6 +5,7 @@
     pt: {
       "nav.about": "Sobre",
       "nav.experience": "Experiência",
+      "nav.achievements": "Conquistas",
       "nav.projects": "Projetos",
       "nav.articles": "Artigos",
       "nav.contact": "Contato",
@@ -12,7 +13,7 @@
       "hero.eyebrow": "Analista &amp; Engenheiro de Dados",
       "hero.sub.short": "Dados brutos em decisões de negócio: pipelines, modelagem e dashboards.",
       "hero.stat.years.unit": "anos",
-      "hero.stat.projects.count": "5",
+      "hero.stat.projects.count": "6",
       "hero.stat.projects.word": "projetos",
 
       "about.eyebrow": "01 · Sobre",
@@ -43,14 +44,35 @@
       "exp.inprex.role": "Suporte Técnico · InPrex Tecnologia",
       "exp.inprex.desc": "Help desk e atendimento ao cliente, instalação e configuração de equipamentos. Base de resolução de problemas que levou à transição para a área de dados.",
 
-      "proj.eyebrow": "03 · Projetos",
-      "proj.lead": "Cinco projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional, dashboard e machine learning.",
+      "ach.eyebrow": "03 · Conquistas",
+      "ach.photoPending": "Foto em breve",
+      "ach.hack1.badge": "TOP 5",
+      "ach.hack1.title": "Hack FAESA",
+      "ach.hack1.meta": "[mês/ano] · Equipe [nome da equipe]",
+      "ach.hack1.desc": "[Descrição breve do projeto feito no hackathon.]",
+      "ach.hack2.badge": "3º LUGAR",
+      "ach.hack2.title": "Hack FAESA",
+      "ach.hack2.meta": "[mês/ano] · Equipe [nome da equipe]",
+      "ach.hack2.desc": "[Descrição breve do projeto feito no hackathon.]",
+      "ach.certs.title": "Certificações",
+      "ach.certs.az900": "Microsoft Azure Fundamentals",
+      "ach.certs.dp700": "Fabric Data Engineer Associate · em preparação",
+
+      "proj.eyebrow": "04 · Projetos",
+      "proj.lead": "Seis projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional, dashboard, machine learning e transformação de dados.",
+      "proj.status.wip": "Em desenvolvimento",
 
       "proj.ia.tag": "Machine Learning",
       "proj.ia.title": "Classificação de Células com PyTorch",
       "proj.ia.problem": "Classificar imagens de células sanguíneas em 4 tipos ligados à Leucemia Linfoblástica Aguda, a partir de um dataset público de 3.242 imagens.",
       "proj.ia.approach": "Fine-tuning de uma EfficientNet-B0 em PyTorch, com early stopping e split treino/validação/teste, servido por uma interface Streamlit para classificar novas imagens.",
       "proj.ia.result": "99% de acurácia no conjunto de teste (487 imagens nunca vistas no treino), com precisão e recall acima de 0.95 em todas as 4 classes.",
+
+      "proj.dbt.tag": "Transformação de Dados",
+      "proj.dbt.title": "Transformações em dbt sobre o Dataset Olist",
+      "proj.dbt.problem": "Mostrar a mesma origem de dados (Olist) transformada com SQL declarativo em vez de um pipeline Python imperativo, como contraponto direto ao projeto de ETL.",
+      "proj.dbt.approach": "Projeto dbt sobre DuckDB: camada de staging completa com testes genéricos (unique, not_null, relationships), e um roadmap público guiando a construção incremental das dimensões, fatos e testes de negócio.",
+      "proj.dbt.result": "CI rodando dbt build a cada commit. Em construção ativa, com progresso diário documentado no repositório.",
       "proj.label.problem": "Problema.",
       "proj.label.approach": "Abordagem.",
       "proj.label.result": "Resultado.",
@@ -84,7 +106,7 @@
       "proj.other.futebol": " · o mesmo domínio migrado para MongoDB, com o script de migração incluído",
       "proj.other.barbearia": " · sistema desktop em C# / .NET para gestão de barbearia",
 
-      "articles.eyebrow": "04 · Artigos",
+      "articles.eyebrow": "05 · Artigos",
       "articles.lead": "Escrevo sobre SQL Server e dados: aqui no portfólio, no blog da Databasers e no LinkedIn.",
       "articles.read": "Ler no blog da Databasers &#8594;",
       "articles.readNative": "Ler artigo &#8594;",
@@ -106,7 +128,7 @@
       "articles.pivot.title": "PIVOT e UNPIVOT — o que é e como usar",
       "articles.pivot.excerpt": "Como usar os operadores PIVOT e UNPIVOT do SQL Server para transformar linhas em colunas (e o caminho inverso) direto na query, sem gambiarra de CASE WHEN nem tratamento extra no ETL.",
 
-      "contact.eyebrow": "05 · Contato",
+      "contact.eyebrow": "06 · Contato",
       "contact.title": "Vamos conversar",
       "contact.lead": "Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.",
 
@@ -115,6 +137,7 @@
     en: {
       "nav.about": "About",
       "nav.experience": "Experience",
+      "nav.achievements": "Achievements",
       "nav.projects": "Projects",
       "nav.articles": "Articles",
       "nav.contact": "Contact",
@@ -122,7 +145,7 @@
       "hero.eyebrow": "Data Analyst &amp; Data Engineer",
       "hero.sub.short": "Raw data into business decisions: pipelines, modeling and dashboards.",
       "hero.stat.years.unit": "years",
-      "hero.stat.projects.count": "5",
+      "hero.stat.projects.count": "6",
       "hero.stat.projects.word": "projects",
 
       "about.eyebrow": "01 · About",
@@ -153,14 +176,35 @@
       "exp.inprex.role": "Technical Support · InPrex Tecnologia",
       "exp.inprex.desc": "Help desk and customer support, equipment installation and configuration. The troubleshooting foundation that led to the move into data.",
 
-      "proj.eyebrow": "03 · Projects",
-      "proj.lead": "Five projects covering the full cycle: ingestion, modeling, transactional database, dashboard and machine learning.",
+      "ach.eyebrow": "03 · Achievements",
+      "ach.photoPending": "Photo coming soon",
+      "ach.hack1.badge": "TOP 5",
+      "ach.hack1.title": "Hack FAESA",
+      "ach.hack1.meta": "[month/year] · Team [team name]",
+      "ach.hack1.desc": "[Short description of the hackathon project.]",
+      "ach.hack2.badge": "3RD PLACE",
+      "ach.hack2.title": "Hack FAESA",
+      "ach.hack2.meta": "[month/year] · Team [team name]",
+      "ach.hack2.desc": "[Short description of the hackathon project.]",
+      "ach.certs.title": "Certifications",
+      "ach.certs.az900": "Microsoft Azure Fundamentals",
+      "ach.certs.dp700": "Fabric Data Engineer Associate · in progress",
+
+      "proj.eyebrow": "04 · Projects",
+      "proj.lead": "Six projects covering the full cycle: ingestion, modeling, transactional database, dashboard, machine learning and data transformation.",
+      "proj.status.wip": "In progress",
 
       "proj.ia.tag": "Machine Learning",
       "proj.ia.title": "Blood Cell Classification with PyTorch",
       "proj.ia.problem": "Classifying blood cell images into 4 types linked to Acute Lymphoblastic Leukemia, from a public dataset of 3,242 images.",
       "proj.ia.approach": "Fine-tuned an EfficientNet-B0 in PyTorch, with early stopping and a train/validation/test split, served through a Streamlit app to classify new images.",
       "proj.ia.result": "99% accuracy on the test set (487 images never seen during training), with precision and recall above 0.95 across all 4 classes.",
+
+      "proj.dbt.tag": "Data Transformation",
+      "proj.dbt.title": "dbt Transformations over the Olist Dataset",
+      "proj.dbt.problem": "Showing the same data source (Olist) transformed with declarative SQL instead of an imperative Python pipeline, as a direct counterpoint to the ETL project.",
+      "proj.dbt.approach": "A dbt project on DuckDB: a complete staging layer with generic tests (unique, not_null, relationships), and a public roadmap guiding the incremental build of dimensions, facts and business tests.",
+      "proj.dbt.result": "CI running dbt build on every commit. Actively under construction, with daily progress tracked in the repo.",
       "proj.label.problem": "Problem.",
       "proj.label.approach": "Approach.",
       "proj.label.result": "Result.",
@@ -194,7 +238,7 @@
       "proj.other.futebol": " · the same domain migrated to MongoDB, including the migration script",
       "proj.other.barbearia": " · desktop system in C# / .NET for barbershop management",
 
-      "articles.eyebrow": "04 · Articles",
+      "articles.eyebrow": "05 · Articles",
       "articles.lead": "I write about SQL Server and data: here on the portfolio, on the Databasers blog and on LinkedIn.",
       "articles.read": "Read on the Databasers blog &#8594;",
       "articles.readNative": "Read article &#8594;",
@@ -216,7 +260,7 @@
       "articles.pivot.title": "PIVOT and UNPIVOT — what they are and how to use them",
       "articles.pivot.excerpt": "Using SQL Server's PIVOT and UNPIVOT operators to turn rows into columns (and back) directly in the query, without a CASE WHEN workaround or extra ETL handling.",
 
-      "contact.eyebrow": "05 · Contact",
+      "contact.eyebrow": "06 · Contact",
       "contact.title": "Let's talk",
       "contact.lead": "Open to Data Analyst and Data Engineer opportunities. Reach out directly by email or LinkedIn.",
 
@@ -324,6 +368,7 @@
     "azure-adf-ingestao-bcb",
     "pi3-analise-tendencias-ti",
     "prj_ia_reconhecimento_celulas",
+    "dbt-olist-analytics",
   ];
   var HIDDEN_REPOS = [
     "vinnysou.github.io",

@@ -31,6 +31,7 @@
 <div class="mobile-nav glass" id="mobile-nav">
   <a href="#sobre" data-i18n="nav.about">Sobre</a>
   <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+  <a href="#conquistas" data-i18n="nav.achievements">Conquistas</a>
   <a href="#projetos" data-i18n="nav.projects">Projetos</a>
   <a href="#artigos" data-i18n="nav.articles">Artigos</a>
   <a href="#contato" data-i18n="nav.contact">Contato</a>
@@ -55,6 +56,7 @@
     <nav class="side-nav" aria-label="Navegação de seções">
       <a href="#sobre" class="side-nav-link" data-section="sobre"><span class="side-nav-line"></span><span data-i18n="nav.about">Sobre</span></a>
       <a href="#experiencia" class="side-nav-link" data-section="experiencia"><span class="side-nav-line"></span><span data-i18n="nav.experience">Experiência</span></a>
+      <a href="#conquistas" class="side-nav-link" data-section="conquistas"><span class="side-nav-line"></span><span data-i18n="nav.achievements">Conquistas</span></a>
       <a href="#projetos" class="side-nav-link" data-section="projetos"><span class="side-nav-line"></span><span data-i18n="nav.projects">Projetos</span></a>
       <a href="#artigos" class="side-nav-link" data-section="artigos"><span class="side-nav-line"></span><span data-i18n="nav.articles">Artigos</span></a>
       <a href="#contato" class="side-nav-link" data-section="contato"><span class="side-nav-line"></span><span data-i18n="nav.contact">Contato</span></a>
@@ -169,8 +171,60 @@
       </ol>
     </section>
 
+    <section id="conquistas" class="csection">
+      <p class="csection-eyebrow reveal" data-i18n="ach.eyebrow">03 · Conquistas</p>
+
+      <div class="achievements-grid">
+        <article class="achievement-card reveal glass">
+          <div class="achievement-photo achievement-photo--empty">
+            <span data-i18n="ach.photoPending">Foto em breve</span>
+          </div>
+          <div class="achievement-body">
+            <span class="achievement-icon" aria-hidden="true"></span>
+            <span class="achievement-badge" data-i18n="ach.hack1.badge">TOP 5</span>
+            <h3 data-i18n="ach.hack1.title">Hack FAESA</h3>
+            <p class="achievement-meta" data-i18n="ach.hack1.meta">[mês/ano] · Equipe [nome da equipe]</p>
+            <p data-i18n="ach.hack1.desc">[Descrição breve do projeto feito no hackathon.]</p>
+          </div>
+        </article>
+
+        <article class="achievement-card reveal glass">
+          <div class="achievement-photo achievement-photo--empty">
+            <span data-i18n="ach.photoPending">Foto em breve</span>
+          </div>
+          <div class="achievement-body">
+            <span class="achievement-icon" aria-hidden="true"></span>
+            <span class="achievement-badge achievement-badge--gold" data-i18n="ach.hack2.badge">3º LUGAR</span>
+            <h3 data-i18n="ach.hack2.title">Hack FAESA</h3>
+            <p class="achievement-meta" data-i18n="ach.hack2.meta">[mês/ano] · Equipe [nome da equipe]</p>
+            <p data-i18n="ach.hack2.desc">[Descrição breve do projeto feito no hackathon.]</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="certifications reveal">
+        <h3 data-i18n="ach.certs.title">Certificações</h3>
+        <div class="cert-badges">
+          <a class="cert-badge" href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" target="_blank" rel="noopener">
+            <img class="cert-badge-icon cert-badge-icon--official" src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Certified badge">
+            <div>
+              <strong>AZ&#8209;900</strong>
+              <span data-i18n="ach.certs.az900">Microsoft Azure Fundamentals</span>
+            </div>
+          </a>
+          <div class="cert-badge cert-badge--pending">
+            <span class="cert-badge-icon" aria-hidden="true"></span>
+            <div>
+              <strong>DP&#8209;700</strong>
+              <span data-i18n="ach.certs.dp700">Fabric Data Engineer Associate &middot; em preparação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projetos" class="csection">
-      <p class="csection-eyebrow reveal" data-i18n="proj.eyebrow">03 · Projetos</p>
+      <p class="csection-eyebrow reveal" data-i18n="proj.eyebrow">04 · Projetos</p>
       <p class="section-lead reveal" data-i18n="proj.lead">Quatro projetos que cobrem o ciclo completo: ingestão, modelagem, banco transacional e dashboard.</p>
 
       <div class="projects-grid">
@@ -260,6 +314,24 @@
           </div>
         </article>
 
+        <article class="project-card reveal glass" id="proj-dbt">
+          <div class="project-card-head">
+            <span class="project-index">06</span>
+            <span class="project-tag" data-i18n="proj.dbt.tag">Transformação de Dados</span>
+            <span class="project-status" data-i18n="proj.status.wip">Em desenvolvimento</span>
+          </div>
+          <h3 data-i18n="proj.dbt.title">Transformações em dbt sobre o Dataset Olist</h3>
+          <p class="project-problem"><strong data-i18n="proj.label.problem">Problema.</strong> <span data-i18n="proj.dbt.problem">Mostrar a mesma origem de dados (Olist) transformada com SQL declarativo em vez de um pipeline Python imperativo, como contraponto direto ao projeto de ETL.</span></p>
+          <p class="project-approach"><strong data-i18n="proj.label.approach">Abordagem.</strong> <span data-i18n="proj.dbt.approach">Projeto dbt sobre DuckDB: camada de staging completa com testes genéricos (unique, not_null, relationships), e um roadmap público guiando a construção incremental das dimensões, fatos e testes de negócio.</span></p>
+          <p class="project-result"><strong data-i18n="proj.label.result">Resultado.</strong> <span data-i18n="proj.dbt.result">CI rodando dbt build a cada commit. Em construção ativa, com progresso diário documentado no repositório.</span></p>
+          <ul class="tag-list project-stack">
+            <li>dbt</li><li>DuckDB</li><li>SQL</li><li>GitHub Actions</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/VinnySou/dbt-olist-analytics" target="_blank" rel="noopener">GitHub &#8594;</a>
+          </div>
+        </article>
+
       </div>
 
       <div class="other-projects reveal">
@@ -273,7 +345,7 @@
     </section>
 
     <section id="artigos" class="csection">
-      <p class="csection-eyebrow reveal" data-i18n="articles.eyebrow">04 · Artigos</p>
+      <p class="csection-eyebrow reveal" data-i18n="articles.eyebrow">05 · Artigos</p>
       <p class="section-lead reveal" data-i18n="articles.lead">Escrevo sobre SQL Server e dados: aqui no portfólio, no blog da Databasers e no LinkedIn.</p>
 
       <!--
@@ -304,7 +376,7 @@
     </section>
 
     <section id="contato" class="csection">
-      <p class="csection-eyebrow reveal" data-i18n="contact.eyebrow">05 · Contato</p>
+      <p class="csection-eyebrow reveal" data-i18n="contact.eyebrow">06 · Contato</p>
       <h2 class="contact-title reveal" data-i18n="contact.title">Vamos conversar</h2>
       <p class="section-lead reveal" data-i18n="contact.lead">Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.</p>
       <div class="contact-links reveal">
