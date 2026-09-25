@@ -19,7 +19,7 @@
       "about.eyebrow": "01 · Sobre",
       "about.p1": "Sou trainee de dados na Databasers, uma consultoria especializada, onde atuo de ponta a ponta: da ingestão à entrega do dashboard. No dia a dia, oriento pipelines no Azure Data Factory e no Microsoft Fabric, e atuo como DBA de bancos SQL Server (on-premises e Azure SQL): administração, monitoramento, otimização de performance e construção de soluções analíticas em Power BI.",
       "about.p2": "Estudo Ciência da Computação na FAESA, com conclusão prevista para 2027, e sou certificado em Microsoft Azure Fundamentals (AZ-900). Estou me preparando para a certificação DP-700 (Fabric Data Engineer Associate).",
-      "about.p3": "Comecei em help desk, migrei para dados através de um estágio e segui como trainee. Hoje busco uma posição de Analista ou Engenheiro de Dados onde eu possa assumir mais responsabilidade sobre arquitetura e qualidade de dados.",
+      "about.p3": "Comecei em help desk, migrei para dados através de um estágio e segui como trainee. Meu foco agora é assumir cada vez mais responsabilidade sobre arquitetura e qualidade de dados.",
       "about.fact.location": "Localização",
       "about.fact.role": "Cargo atual",
       "about.fact.role.value": "Trainee de Dados, Databasers",
@@ -130,7 +130,7 @@
 
       "contact.eyebrow": "06 · Contato",
       "contact.title": "Vamos conversar",
-      "contact.lead": "Aberto a oportunidades de Analista e Engenheiro de Dados. Responda direto por e-mail ou LinkedIn.",
+      "contact.lead": "Curioso sobre algum projeto ou quer trocar uma ideia sobre dados? Fico à disposição por e-mail ou LinkedIn.",
 
       "footer.built": "Cariacica, ES · Brasil"
     },
@@ -151,7 +151,7 @@
       "about.eyebrow": "01 · About",
       "about.p1": "I'm a data trainee at Databasers, a specialized data consultancy, working end to end: from ingestion to the finished dashboard. Day to day, I orchestrate pipelines in Azure Data Factory and Microsoft Fabric, and act as DBA for SQL Server databases (on-premises and Azure SQL): administration, monitoring, performance tuning, and building analytical solutions in Power BI.",
       "about.p2": "I'm studying Computer Science at FAESA, graduating in 2027, and I'm Microsoft Azure Fundamentals (AZ-900) certified. I'm currently preparing for the DP-700 certification (Fabric Data Engineer Associate).",
-      "about.p3": "I started in help desk, moved into data through an internship, and continued as a trainee. Now I'm looking for a Data Analyst or Data Engineer role where I can take on more ownership of architecture and data quality.",
+      "about.p3": "I started in help desk, moved into data through an internship, and continued as a trainee. My focus now is taking on more ownership of architecture and data quality.",
       "about.fact.location": "Location",
       "about.fact.role": "Current role",
       "about.fact.role.value": "Data Trainee, Databasers",
@@ -262,7 +262,7 @@
 
       "contact.eyebrow": "06 · Contact",
       "contact.title": "Let's talk",
-      "contact.lead": "Open to Data Analyst and Data Engineer opportunities. Reach out directly by email or LinkedIn.",
+      "contact.lead": "Curious about a project or want to talk data? Feel free to reach out by email or LinkedIn.",
 
       "footer.built": "Cariacica, ES · Brazil"
     }
