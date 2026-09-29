@@ -42,6 +42,14 @@ Todo texto visível tem uma chave `data-i18n` no HTML e sua tradução em
 `js/main.js` (objetos `i18n.pt` e `i18n.en`). Para atualizar um texto, edite os
 dois idiomas juntos para não ficarem dessincronizados.
 
+**Importante:** sempre que `js/main.js` ou `css/style.css` mudar, incremente o
+`?v=N` no final do `<link>`/`<script>` que os referencia, em **todos** os HTMLs
+que os carregam (`index.html`, `artigos/index.html`, `artigos/_template.html`,
+e qualquer artigo publicado). O GitHub Pages manda esses arquivos com
+`Cache-Control: max-age=600`, então sem trocar a versão o navegador de quem já
+visitou o site pode continuar mostrando o conteúdo antigo por até 10 minutos
+após um push.
+
 ## Publicar um artigo
 
 Ver [`artigos/README.md`](artigos/README.md): artigos nativos (páginas hospedadas
