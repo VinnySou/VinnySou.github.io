@@ -489,6 +489,7 @@
     var drift = 0;
     var last = performance.now();
     var step = 360 / panels.length;
+    var SPIN_VH = 2.6; // mantenha igual a --spin (em vh) no home.css
 
     function paint() {
       ring.style.transform = "rotateY(" + current.toFixed(2) + "deg)";
@@ -503,11 +504,12 @@
       var dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       var sy = window.scrollY;
-      var past = sy > window.innerHeight * 1.1;
+      var spin = window.innerHeight * SPIN_VH; // distancia em que o hero fica fixo girando
+      var past = sy > spin + window.innerHeight * 1.1;
       hero.style.visibility = past ? "hidden" : "visible";
       if (!past) {
         if (!reduce) drift += dt * 5;
-        var target = -24 + sy * 0.27 + drift;
+        var target = -24 + Math.min(sy, spin) / spin * 360 + drift;
         current += (target - current) * 0.1;
         paint();
       }
