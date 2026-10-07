@@ -7,11 +7,31 @@ hospedado no GitHub Pages.
 
 ```
 index.html      marcação e conteúdo (com chaves data-i18n para tradução)
-css/style.css   design system, layout e o efeito de vidro (liquid glass)
-js/main.js      dicionário de tradução PT/EN, scrollspy, menu mobile, animações
-assets/         favicon
+css/style.css   tokens, vidro (liquid glass), componentes das seções e páginas de artigo
+css/home.css    layout da home: topbar, hero fixo com anel 3D, cortina, tema claro
+js/main.js      traduções PT/EN, anel 3D com scroll, tema, menu mobile, animações
+assets/         favicon, imagem de preview social, fotos
 artigos/        artigos publicados direto no site (ver artigos/README.md)
 ```
+
+## Hero 3D (anel girando com o scroll)
+
+O hero (`#hero`) é `position: fixed` e fica atrás do conteúdo; a `.curtain` (todo o
+resto da página) tem `margin-top: 100vh` e desliza por cima dele ao rolar. O anel
+é feito só com CSS 3D (`perspective` + `preserve-3d`, sem WebGL nem biblioteca):
+8 `.panel` posicionados com `rotateY(i * 45deg) translateZ(raio)`. Em
+`js/main.js`, `initRing()` liga `window.scrollY` à rotação (com suavização e uma
+deriva lenta) e escurece os painéis que ficam de costas. As capas dos projetos
+são SVGs inline (`<symbol id="art-...">` no topo do `<body>`), reaproveitadas no
+anel e nos cards de projeto. Para trocar o conteúdo de um painel, edite o
+`<figure class="panel">` correspondente no `index.html`.
+
+O nome gigante é ajustado por `fitHeroName()` para ocupar a largura da tela, e o
+botão de tema alterna `data-theme="light|dark"` no `<html>` (salvo em
+`localStorage`, chave `vss-theme`).
+
+A versão anterior do site (layout com sidebar fixa) está guardada na tag
+`v1-sidebar-azul` e na branch `backup/v1-sidebar-azul`.
 
 ## Rodar localmente
 

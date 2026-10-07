@@ -11,6 +11,13 @@
       "nav.contact": "Contato",
 
       "hero.eyebrow": "Analista &amp; Engenheiro de Dados",
+      "hero.scroll": "Role para explorar",
+      "ring.etl": "Pipeline ETL",
+      "ring.sql": "T-SQL avançado",
+      "ring.adf": "Azure Data Factory",
+      "ring.analysis": "Análise de dados",
+      "ring.ml": "Machine learning",
+      "ring.dbt": "dbt",
       "hero.sub.short": "Dados brutos em decisões de negócio: pipelines, modelagem e dashboards.",
       "hero.stat.years.unit": "anos",
       "hero.stat.projects.count": "6",
@@ -143,6 +150,13 @@
       "nav.contact": "Contact",
 
       "hero.eyebrow": "Data Analyst &amp; Data Engineer",
+      "hero.scroll": "Scroll to explore",
+      "ring.etl": "ETL pipeline",
+      "ring.sql": "Advanced T-SQL",
+      "ring.adf": "Azure Data Factory",
+      "ring.analysis": "Data analysis",
+      "ring.ml": "Machine learning",
+      "ring.dbt": "dbt",
       "hero.sub.short": "Raw data into business decisions: pipelines, modeling and dashboards.",
       "hero.stat.years.unit": "years",
       "hero.stat.projects.count": "6",
@@ -301,7 +315,7 @@
   }
 
   function initScrollSpy() {
-    var links = document.querySelectorAll(".side-nav-link");
+    var links = document.querySelectorAll(".topbar-nav a[data-section]");
     if (!links.length || !("IntersectionObserver" in window)) return;
     var sections = Array.prototype.map.call(links, function (link) {
       return document.getElementById(link.getAttribute("data-section"));
@@ -372,6 +386,7 @@
   ];
   var HIDDEN_REPOS = [
     "vinnysou.github.io",
+    "vinnysou",
     "prj_monitoramento_sono",
     "teste",
     "desktop-tutorial",
@@ -424,12 +439,97 @@
       });
   }
 
+  function initTheme() {
+    var btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("vss-theme", next); } catch (e) {}
+    });
+  }
+
+  function initTopbar() {
+    var bar = document.getElementById("topbar");
+    if (!bar) return;
+    var onScroll = function () {
+      bar.classList.toggle("is-scrolled", window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  // Ajusta o tamanho da fonte do nome para ele ocupar a largura da tela.
+  function fitHeroName() {
+    var name = document.getElementById("hero-name");
+    var text = name && name.querySelector(".hero-name-text");
+    if (!text) return;
+    var parts = text.querySelectorAll(".nm");
+    var stacked = window.innerWidth <= 800;
+    var probe = 100;
+    name.style.fontSize = probe + "px";
+    var widest = 0;
+    if (stacked) {
+      parts.forEach(function (p) { widest = Math.max(widest, p.getBoundingClientRect().width); });
+    } else {
+      widest = text.getBoundingClientRect().width;
+    }
+    var target = window.innerWidth * (stacked ? 0.9 : 0.94);
+    name.style.fontSize = (probe * target / widest) + "px";
+  }
+
+  // Anel 3D: a rotacao acompanha o scroll (com suavizacao) e tem uma deriva lenta.
+  function initRing() {
+    var ring = document.getElementById("ring");
+    var hero = document.getElementById("hero");
+    if (!ring || !hero) return;
+    var panels = Array.prototype.slice.call(ring.querySelectorAll(".panel"));
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var current = -24;
+    var drift = 0;
+    var last = performance.now();
+    var step = 360 / panels.length;
+
+    function paint() {
+      ring.style.transform = "rotateY(" + current.toFixed(2) + "deg)";
+      panels.forEach(function (panel, i) {
+        var angle = ((i * step + current) % 360 + 360) % 360;
+        var facing = (Math.cos(angle * Math.PI / 180) + 1) / 2; // 1 = de frente, 0 = de costas
+        panel.style.opacity = (0.5 + 0.5 * facing).toFixed(3);
+      });
+    }
+
+    function frame(now) {
+      var dt = Math.min(0.05, (now - last) / 1000);
+      last = now;
+      var sy = window.scrollY;
+      var past = sy > window.innerHeight * 1.1;
+      hero.style.visibility = past ? "hidden" : "visible";
+      if (!past) {
+        if (!reduce) drift += dt * 5;
+        var target = -24 + sy * 0.27 + drift;
+        current += (target - current) * 0.1;
+        paint();
+      }
+      requestAnimationFrame(frame);
+    }
+
+    paint();
+    requestAnimationFrame(frame);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLangToggle();
+    initTheme();
+    initTopbar();
+    fitHeroName();
+    initRing();
     initMobileNav();
     initReveal();
     initScrollSpy();
     initOtherProjects();
+    window.addEventListener("resize", fitHeroName);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeroName);
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
